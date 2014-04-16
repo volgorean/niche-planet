@@ -1,0 +1,21 @@
+<div class="panel loginPanel">
+  <h2>Edit Post</h2>
+
+  <%= form_for @post do |f| %>
+    <%= f.text_field :title, placeholder: "Title", value: @post.title %>
+    <%= f.submit "Update Title", class: "button tiny" %>
+  <% end %>
+  <%= form_for @post do |f| %>
+    <%= f.text_area :description, placeholder: "Description", rows: 6, value: @post.description %>
+    <%= f.submit "Update Description", class: "button tiny" %>
+  <% end %>
+  <%= form_for @post do |f| %>
+    <%= f.select :niche_id, options_for_select(@niches, @post.niche_id) %>
+    <%= f.submit "Update Niche", class: "button tiny" %>
+  <% end %>
+  <%= form_for @post do |f| %>
+  <%= image_tag @post.image.url(:medium) %>
+    <%= f.file_field :image %>
+    <%= f.submit "Update Image", class: "button tiny" %>
+  <% end %>
+</div>

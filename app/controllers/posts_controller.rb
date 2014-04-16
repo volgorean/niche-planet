@@ -25,6 +25,26 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def edit
+    if current_user.id == Post.find(params[:id]).user_id
+      @post = Post.find(params[:id])
+      @niches = []
+      Niche.all.each do |niche|
+        @niches << [niche.name, niche.id]
+      end
+    elsif !user_signed_in?
+      redirect_to "/users/sign_in"
+    else
+      redirect_to "/"
+    end
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.update( posts_params )
+    redirect_to "/posts/#{params[:id]}/edit"
+  end
+
 private
   def posts_params
     params.require(:post).permit(:title, :description, :niche_id, :image)

@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :posts
   resources :niches
   resources :users do
-    resources :posts
+    resources :posts do
+      resources :itineraries
+    end
   end
   root to: "posts#index"
 end
