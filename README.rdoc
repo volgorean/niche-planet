@@ -4,7 +4,7 @@ Niche Planet is an awesome web app that allows users to search for adventures th
 
 * Add Itinerary to post
 
-* Let User Specify Niche
+* add pic for a niche
 
 * Prettfy Pages
 
