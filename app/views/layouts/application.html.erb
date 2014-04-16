@@ -30,7 +30,7 @@
               <a href="#">USERNAME</a>
               <ul class="dropdown">
                 <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
-                <li><a href="#">My Posts</a></li>
+                <li><a href="/users/<%= current_user.id %>">My Posts</a></li>
                 <li><a href="#">Settings</a></li>
               </ul>
             </li>

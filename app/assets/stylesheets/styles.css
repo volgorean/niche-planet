@@ -16,3 +16,14 @@
 .loginPanel {
   margin: 5%;
 }
+.postPanel {
+  width: 180px;
+  height: 200px;
+  text-align: center;
+  background-color: #79BD9A;
+  padding: 5px;
+  margin: 5px;
+}
+.postTitle {
+  text-align: center;
+}
