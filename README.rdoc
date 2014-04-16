@@ -11,3 +11,5 @@ Niche Planet is an awesome web app that allows users to search for adventures th
 * Allow user to add gear for theadventure with links to online stores
 
 * make guides for a niche
+
+* add search function (users, posts, niches)
