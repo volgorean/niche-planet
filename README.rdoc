@@ -1,28 +1,13 @@
-== README
+== Niche Planet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Niche Planet is an awesome web app that allows users to search for adventures that pertain to their particular niche and see useful info such as the gear needed and popular itineraries.
 
-Things you may want to cover:
+* Add Itinerary to post
 
-* Ruby version
+* Let User Specify Niche
 
-* System dependencies
+* Prettfy Pages
 
-* Configuration
+* Allow user to add gear for theadventure with links to online stores
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* make guides for a niche
