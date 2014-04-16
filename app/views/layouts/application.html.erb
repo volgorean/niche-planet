@@ -25,11 +25,12 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <% if user_signed_in? %>
-            <li><a href="#">Post</a></li>
+            <li><a href="/posts/new">Post</a></li>
             <li class="has-dropdown">
               <a href="#">USERNAME</a>
               <ul class="dropdown">
                 <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
+                <li><a href="#">My Posts</a></li>
                 <li><a href="#">Settings</a></li>
               </ul>
             </li>

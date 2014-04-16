@@ -1,0 +1,9 @@
+<div class="panel loginPanel">
+  <h2>New Post</h2>
+
+  <%= form_for @post do |f| %>
+    <%= f.text_field :title, autofocus: true, placeholder: "Title" %>
+    <%= f.text_area :description, autofocus: true, placeholder: "Description", rows: 6 %>
+    <div><%= f.submit "Post" %></div>
+  <% end %>
+</div>
