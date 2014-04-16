@@ -1,4 +1,6 @@
-<p>PIC HERE</p>
+<div class="nichePic" style="background-image: url(<%= @niche.image.url %>) ;">
+  <h3 class="guideLink">Niche Guide</h3>
+</div>
 <div class="panel">
   <% @posts.each do |post| %>
     <a href="/posts/<%= post.id %>">

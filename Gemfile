@@ -11,6 +11,8 @@ gem 'jbuilder'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise'
 gem 'foundation-rails'
+gem "paperclip"
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'

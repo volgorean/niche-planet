@@ -5,6 +5,12 @@
   background-image: url("pic_cityscape.jpg");
   background-position:center;
 }
+.nichePic {
+  height: 200px;
+  background-position: center ;
+  text-align: center;
+  margin: 0px;
+}
 .smallAlert {
   position: absolute;
   max-width: 100%;
@@ -33,4 +39,8 @@
   text-align: center;
   padding: 5px;
   margin: 5px;
+}
+.guideLink {
+position: relative;
+top: 40%;
 }

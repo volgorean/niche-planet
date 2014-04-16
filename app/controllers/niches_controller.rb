@@ -1,6 +1,7 @@
 class NichesController < ApplicationController
   def show
     @posts = Post.where(niche_id: params[:id])
+    @niche = Niche.find(params[:id])
   end
 
   def new
@@ -12,7 +13,12 @@ class NichesController < ApplicationController
   end
 
   def create
-    Niche.create(params.require(:niche).permit(:name))
+    Niche.create( niche_params )
     redirect_to "/"
+  end
+
+private
+  def niche_params
+    params.require(:niche).permit(:name, :image)
   end
 end
