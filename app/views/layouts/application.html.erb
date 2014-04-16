@@ -25,16 +25,17 @@
         <!-- Right Nav Section -->
         <ul class="right">
           <% if user_signed_in? %>
+            <li><a href="#">Post</a></li>
             <li class="has-dropdown">
               <a href="#">USERNAME</a>
               <ul class="dropdown">
-                <li><a href="#">Log Out</a></li>
+                <li><a data-method="delete" href="/users/sign_out">Log Out</a></li>
                 <li><a href="#">Settings</a></li>
               </ul>
             </li>
         <% else %>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Sign Up</a></li>
+          <li><a href="/users/sign_in">Login</a></li>
+          <li><a href="/users/sign_up">Sign Up</a></li>
         <% end %>
         </ul>
 
@@ -53,7 +54,14 @@
         </ul>
       </section>
     </nav>
-
+</div>
+    <% if notice || alert %>
+      <div data-alert class="alert-box radius smallAlert">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      <a href="#" class="close">&times;</a>
+    </div>
+    <% end %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
