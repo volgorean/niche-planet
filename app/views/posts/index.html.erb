@@ -1,5 +1,10 @@
 <div class="picPanel">
 </div>
 <div class="panel indexPanel">
-  <h1>Niche Guides</h1>
+  <h1>Niches</h1>
+  <% @niches.each do |niche| %>
+    <div class="nichePanel">
+      <%= niche.name %>
+    </div>
+  <% end %>
 </div>

@@ -1,0 +1,8 @@
+<div class="panel loginPanel">
+  <h2>New Niche</h2>
+
+  <%= form_for @niche do |f| %>
+    <%= f.text_field :name, autofocus: true, placeholder: "Name" %>
+    <div><%= f.submit "Niche" %></div>
+  <% end %>
+</div>
