@@ -17,12 +17,17 @@ class PostsController < ApplicationController
 
   def create
     @user = User.find(current_user.id)
-    @user.posts.create(params.require(:post).permit(:title, :description, :niche_id))
+    @user.posts.create( posts_params )
     redirect_to "/"
   end
 
   def show
     @post = Post.find(params[:id])
+  end
+
+private
+  def posts_params
+    params.require(:post).permit(:title, :description, :niche_id, :image)
   end
 
 end

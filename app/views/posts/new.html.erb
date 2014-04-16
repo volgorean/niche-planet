@@ -5,6 +5,7 @@
     <%= f.text_field :title, autofocus: true, placeholder: "Title" %>
     <%= f.text_area :description, autofocus: true, placeholder: "Description", rows: 6 %>
     <%= f.select :niche_id, options_for_select(@niches, 1) %>
+    <%= f.file_field :image %>
     <div><%= f.submit "Post" %></div>
   <% end %>
 </div>

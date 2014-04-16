@@ -4,7 +4,7 @@
 <div class="panel">
   <% @posts.each do |post| %>
     <a href="/posts/<%= post.id %>">
-      <div class="postPanel button">
+      <div class="postPanel button" style="background-image: url(<%= post.image.url(:medium) %>) ;">
         <h5><%= post.title %></h5>
         <p><%= post.description[0..20] %></p>
       </div>
