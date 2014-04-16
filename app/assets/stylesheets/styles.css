@@ -1,5 +1,4 @@
 .indexPanel {
-  height: 200px;
 }
 .picPanel {
   height: 300px;
@@ -26,4 +25,12 @@
 }
 .postTitle {
   text-align: center;
+}
+.nichePanel {
+  width: 300px;
+  height: 200px;
+  background-color: red;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
 }

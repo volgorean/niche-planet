@@ -1,1 +1,11 @@
-<p>hi</p>
+<p>PIC HERE</p>
+<div class="panel">
+  <% @posts.each do |post| %>
+    <a href="/posts/<%= post.id %>">
+      <div class="postPanel button">
+        <h5><%= post.title %></h5>
+        <p><%= post.description[0..20] %></p>
+      </div>
+    </a>
+  <% end %>
+</div>

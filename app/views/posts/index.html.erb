@@ -3,8 +3,10 @@
 <div class="panel indexPanel">
   <h1>Niches</h1>
   <% @niches.each do |niche| %>
-    <div class="nichePanel">
-      <%= niche.name %>
+    <a href="/niches/<%= niche.id %>">
+    <div class="nichePanel button">
+      <h5><%= niche.name %></h5>
     </div>
+  </a>
   <% end %>
 </div>
