@@ -1,11 +1,11 @@
 <div class="picPanel">
 </div>
-<div class="panel indexPanel">
+<div class="panel">
   <h1>Niches</h1>
   <% @niches.each do |niche| %>
     <a href="/niches/<%= niche.id %>">
-    <div class="nichePanel button">
-      <h5><%= niche.name %></h5>
+    <div class="nichePanel button" style="background-image: url(<%= niche.image.url(:medium) %>) ;">
+      <h5 class="nicheIconName"><%= niche.name %></h5>
     </div>
   </a>
   <% end %>
