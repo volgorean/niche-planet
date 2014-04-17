@@ -1,7 +1,14 @@
 class PostsController < ApplicationController
   def index
     @niches = Niche.all
-    Post.all
+    @coords = []
+    Post.all.each do |post|
+      post.itineraries.each do |itinerary|
+        if itinerary.lat && itinerary.lng
+        @coords << [{lat: itinerary.lat, lng: itinerary.lng}]
+        end
+      end
+    end
   end
 
   def new
@@ -18,8 +25,8 @@ class PostsController < ApplicationController
 
   def create
     @user = User.find(current_user.id)
-    @user.posts.create( posts_params )
-    redirect_to "/"
+    @post = @user.posts.create( posts_params )
+    redirect_to "/users/#{current_user.id}/posts/#{@post.id}/itineraries/new"
   end
 
   def show

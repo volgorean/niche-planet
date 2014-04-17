@@ -20,6 +20,6 @@ class ItinerariesController < ApplicationController
 
 private
   def itinerary_params
-    params.require(:itinerary).permit(:post_id, :how_much, :what, :time, :date)
+    params.require(:itinerary).permit(:post_id, :how_much, :what, :time, :date, :lat, :lng, :order)
   end
 end

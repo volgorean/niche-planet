@@ -4,6 +4,17 @@
   <%= form_for @itinerary do |f| %>
     <div class="row">
       <div class="large-3 columns">
+        <%= f.text_field :lat, autofocus: true, placeholder: "lat" %>
+      </div>
+      <div class="large-3 columns">
+        <%= f.text_field :lng, autofocus: true, placeholder: "lng" %>
+      </div>
+      <div class="large-3 columns">
+        <%= f.hidden_field :post_id, autofocus: true, value: @post.id %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-3 columns">
         <label>what?
           <%= f.text_field :what, autofocus: true, placeholder: "what?" %>
         </label>
