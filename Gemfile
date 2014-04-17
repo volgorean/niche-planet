@@ -12,7 +12,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'devise'
 gem 'foundation-rails'
 gem "paperclip"
-
+gem 'gmaps4rails'
+gem 'underscore-rails'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
