@@ -7,5 +7,6 @@ Rails.application.routes.draw do
       resources :itineraries
     end
   end
+  resources :itineraries
   root to: "posts#index"
 end

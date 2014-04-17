@@ -18,4 +18,11 @@
     <%= f.file_field :image %>
     <%= f.submit "Update Image", class: "button tiny" %>
   <% end %>
+
+  <% @post.itineraries.each do |iter|%>
+    <%= iter.what %>
+  <% end %>
+
+  <a href="/users/<%= current_user.id %>/posts/<%= @post.id %>/itineraries/new" class="button tiny">Add to itinerary<a>
 </div>
+<%=%>

@@ -1,0 +1,30 @@
+<div class="panel loginPanel">
+  <h2>New Itinerary Item</h2>
+
+  <%= form_for @itinerary do |f| %>
+    <div class="row">
+      <div class="large-3 columns">
+        <label>what?
+          <%= f.text_field :what, autofocus: true, placeholder: "what?" %>
+        </label>
+      </div>
+      <div class="large-3 columns">
+        <label>how Much?
+          <%= f.text_field :how_much, autofocus: true, placeholder: "how Much?" %>
+        </label>
+      </div>
+      <div class="large-3 columns">
+        <label>what day?
+          <%= f.date_field :date, autofocus: true, placeholder: "what day?" %>
+        </label>
+      </div>
+      <div class="large-3 columns">
+        <label>what time?
+          <%= f.time_field :time, autofocus: true, placeholder: "what time?" %>
+        </label>
+      </div>
+      <%= f.hidden_field :post_id, value: params[:post_id] %>
+      <%= f.submit "Add" %>
+    </div>
+  <% end %>
+</div>

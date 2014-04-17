@@ -23,6 +23,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @itineraries = Itinerary.where(post_id: params[:id])
   end
 
   def edit
