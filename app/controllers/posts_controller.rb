@@ -3,11 +3,13 @@ class PostsController < ApplicationController
     @niches = Niche.all
     @coords = []
     Post.all.each do |post|
+      @coord = []
       post.itineraries.each do |itinerary|
         if itinerary.lat && itinerary.lng
-        @coords << [{lat: itinerary.lat, lng: itinerary.lng}]
+          @coord << {lat: itinerary.lat, lng: itinerary.lng}
         end
       end
+      @coords << @coord
     end
   end
 
