@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @niches = Niche.all
+    Post.all
   end
 
   def new
