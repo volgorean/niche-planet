@@ -51,4 +51,8 @@ $( document ).ready(function() {
       handler.fitMapToBounds();
     });
   }
+  google.maps.event.addListener(handler.getMap(), 'click', function(event) {
+      console.log(event.latLng.lng()) //of mouse
+      console.log(event.latLng.lat()) //of mouse
+  });
 });
