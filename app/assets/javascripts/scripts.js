@@ -1,5 +1,8 @@
 
 $( document ).ready(function() {
+  $("#toggleMap").click(function() {
+    $(".hideMap").slideToggle();
+  });
   var handler = Gmaps.build('Google');
   var markersArray = [];
 

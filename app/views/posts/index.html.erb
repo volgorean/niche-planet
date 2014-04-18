@@ -2,23 +2,17 @@
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
 
 <div class="picPanel">
+    <a id="toggleMap" class="toggleMapButton">ToggleMap</a>
 </div>
-
-<div class="panel">
-  <div id="map" style='width: 100%;'>
-
+  <div id="map" class="hideMap" style='width: 100%;'>
       <%= content_tag "div", id: "multi_overlays", style: 'width: 100%; height: 400px;', data: {coords: @coords} do %>
       <% end %>
-
   </div>
-</div>
-
-<div>
-  <h1>Niches</h1>
+<div class="row">
   <% @niches.each do |niche| %>
     <a href="/niches/<%= niche.id %>">
-    <div class="nichePanel button" style="background-image: url(<%= niche.image.url(:medium) %>) ;">
-      <h5 class="nicheIconName"><%= niche.name %></h5>
+    <div class="nichePanel" style="background-image: url(<%= niche.image.url(:medium) %>) ;">
+      <h5 class="postPanelText"><%= niche.name %></h5>
     </div>
   </a>
   <% end %>
