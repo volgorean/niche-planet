@@ -12,10 +12,10 @@
   <%= form_for @itinerary do |f| %>
     <div class="row">
       <div class="large-3 columns">
-        <%= f.text_field :lat, autofocus: true, placeholder: "lat" %>
+        <%= f.text_field :lat, id: "latForm"%>
       </div>
       <div class="large-3 columns">
-        <%= f.text_field :lng, autofocus: true, placeholder: "lng" %>
+        <%= f.text_field :lng, id: "lngForm" %>
       </div>
       <div class="large-3 columns">
         <%= f.hidden_field :post_id, autofocus: true, value: @post.id %>
