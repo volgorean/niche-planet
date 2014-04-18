@@ -2,9 +2,8 @@
 
 Niche Planet is an awesome web app that allows users to search for adventures that pertain to their particular niche and see useful info such as the gear needed and popular itineraries.
 
+==== To Do
 * make ading itineraries cleaner.
-
-* add locations to events
 
 * Prettfy Pages
 
@@ -13,3 +12,7 @@ Niche Planet is an awesome web app that allows users to search for adventures th
 * make guides for a niche
 
 * add search function (users, posts, niches, location)
+
+* make glopal paths look like a heatmap
+
+* add d3 graphic displaying most popular *stuff with a graphic pf a circle with spikes comming out representing the ammounts of *stuff.
