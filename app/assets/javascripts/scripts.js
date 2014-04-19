@@ -1,7 +1,7 @@
 
 $( document ).ready(function() {
   $("#toggleMap").click(function() {
-    $(".hideMap").slideToggle();
+    $(".hideMap"));
   });
   var handler = Gmaps.build('Google');
   var markersArray = [];

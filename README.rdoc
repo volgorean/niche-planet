@@ -16,3 +16,5 @@ Niche Planet is an awesome web app that allows users to search for adventures th
 * make glopal paths look like a heatmap
 
 * add d3 graphic displaying most popular *stuff with a graphic pf a circle with spikes comming out representing the ammounts of *stuff.
+
+* fix bug that prevents a user from clicking to add an itinerary to the map within the circle if there is only one location in the post itinerary.
